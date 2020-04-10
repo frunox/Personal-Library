@@ -6,7 +6,12 @@ class Book {
         return orm.getAllBooks("books")
     }
     getOneBook(bookTitle) {
-        return orm.getOneBook("books", bookTitle)
+        console.log('in Model, bookTitle:  ' + bookTitle)
+        return orm.getOneBook(bookTitle)  // modified, took out "books"
+    }
+    getBookNotes(bookTitle) {
+        console.log('in Model getBookNotes, bookTitle:  ' + bookTitle)
+        return orm.getBookNotes(bookTitle)  // modified, took out "books"
     }
     addBook(title, coverPhoto, authorId) {
         return orm.addBook(title, coverPhoto, authorId)

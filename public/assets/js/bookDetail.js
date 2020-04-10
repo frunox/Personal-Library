@@ -5,19 +5,18 @@ $(document).ready(() => {
   function addNote(event) {
     event.preventDefault()
     const newNote = $('#new-note').val();
-    console.log('newNote:  ', newNote)
     const newNoteObj = {
       note: newNote,
       bookId: $('#book-title').attr('data-book-id')
     }
-
+    console.log('newNoteObj:  ' + JSON.stringify(newNoteObj))
     $.post('/api/book/note', newNoteObj)
       .then(response => {
         $('#new-note').val('');
         console.log(response)
         getBookNotes()
       })
-      .catch(error => console.log(error))
+      .catch(error => console.log('in bookDetail.js  ' + JSON.stringify(error)))
   }
 
   function deleteNote(event) {
