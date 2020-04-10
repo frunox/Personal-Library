@@ -1,3 +1,4 @@
+// set up and open the connection to the database
 const mysql = require('mysql');
 const util = require('util');
 

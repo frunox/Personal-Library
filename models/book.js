@@ -1,4 +1,4 @@
-// Import the ORM to create functions that will interact with the database.
+// Import the ORM to access functions that will interact with the database.
 const orm = require("../config/orm.js");
 
 class Book {
@@ -25,5 +25,5 @@ class Book {
 
 };
 
-// Export the database functions for the controller (booksController.js).
+// Export the controller's database methods for the controller (booksController.js).
 module.exports = new Book();

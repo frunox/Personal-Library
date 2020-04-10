@@ -1,3 +1,4 @@
+// define routes for displaying pages in the browser
 const express = require('express');
 const router = express.Router();
 const path = require('path');
