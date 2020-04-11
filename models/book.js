@@ -3,6 +3,7 @@ const orm = require("../config/orm.js");
 
 class Book {
     getAllBooks() {
+        console.log('in Model getAllBooks')
         return orm.getAllBooks("books")
     }
     getOneBook(bookTitle) {
