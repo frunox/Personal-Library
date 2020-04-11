@@ -9,10 +9,7 @@ class ORM {
     }
 
     // method to query the database for all books and returns all the information for each book
-    getAllBooks() {
-        console.log('in ORM getAllBooks')
-        return this.connection.query('SELECT firstName, lastName, title, coverPhoto FROM authors INNER JOIN books ON authors.id = books.authorId')
-    }
+
 
     // method to retrieve 1 book from the database based on the title
     getOneBook(bookTitle) {
